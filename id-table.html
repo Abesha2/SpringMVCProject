@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+    <h1>Product Details</h1>
+	<div th:if="${error_message}" class="error">
+					    <p th:text="${error_message}"></p>
+					</div>
+    <!-- Display product details -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Brand</th>
+                <th>Made In</th>
+                <th>Total Amount</th>
+                <th>Tax Amount</th>
+                <th>Created At</th>
+                <th>Created By</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:if="${product}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.quantity}"></td>
+                <td th:text="${product.brand}"></td>
+                <td th:text="${product.madeIn}"></td>
+                <td th:text="${product.total}"></td>
+                <td th:text="${product.taxAmount}"></td>
+                <td th:text="${product.createdAt}"></td>
+                <td th:text="${product.createdBy}"></td>
+				
+
+				
+
+            </tr>
+        </tbody>
+    </table>
+    
+
+</body>
+</html>
